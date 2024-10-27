@@ -7,7 +7,11 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #1e1e1e; /* Dark background */
+            background-color: #1e1e1e; /* Dark background as a fallback */
+            background-image: url('WhiteBearCrabBkg.jpg');
+	    background-repeat: no-repeat; /* Prevents tiling */
+	    background-position: center top; /* Centers the image horizontally */
+	    background-size: auto; /* Keeps the original size of the image */
             color: #dcdcdc; /* Light text color */
             text-align: center;
             padding: 50px;
@@ -25,9 +29,20 @@
             font-size: 1.2em;
             margin: 20px 0;
         }
+        u {
+            font-size: 1.2em;
+            margin: 20px 0;
+        }
+        .label {
+            font-size: 1.0em;
+            margin: 20px 0;
+            margin-right: 20px;
+        }
         a {
+            font-size: 1.0em;
             color: #4fa4ff; /* Light blue for links */
             text-decoration: none;
+            margin-right: 20px; /* Space between links */
         }
         a:hover {
             text-decoration: underline;
@@ -38,9 +53,16 @@
 <body>
     <h1>Welcome to <a href="https://wbtek.slocum.net" target="_blank">WBTek</a></h1>
     <h2>Division of WhiteBear Family Inc.</h2>
+    <a href="https://github.io" target="_blank" style="margin-right: 0px; font-size: 0.8em;">on GitHub.io</a>
 
-    <p>Project documentation:</p>
-    <p><a href="https://wbtek.github.io/crypto_screener/docs/crypto_screener" target="_blank">crypto_screener</a></p>
+    <br>
+    <br>
+    <u>Demo Projects</u>
+    <p>
+        <span class="label">Crypto Screener (Rust to WASM):</span>
+        <a href="https://github.com/wbtek/crypto_screener" target="_blank">GitHub</a>
+	<a href="https://wbtek.github.io/crypto_screener/docs/crypto_screener" target="_blank">Documentation</a>
+    </p>
 </body>
 </html>
 
